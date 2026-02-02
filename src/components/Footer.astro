@@ -1,0 +1,50 @@
+---
+import Start from "../assets/start.svg";
+const links = [
+  { title: "Programs", link: "/programs" },
+  { title: "About", link: "/about" },
+  { title: "Contact", link: "/contact" },
+  { title: "Careers", link: "#" },
+];
+---
+
+<footer>
+  <div class="container">
+    <div class="flex">
+      {links.map((item) => <a href={item.link}>{item.title}</a>)}
+    </div>
+    <div class="center">
+      <h3>Degho Labs</h3>
+      <p>&copy; 2026 All Rights Reserved</p>
+    </div>
+  </div>
+</footer>
+
+<style lang="scss">
+  footer {
+    padding: 50px;
+  }
+
+  .flex {
+    justify-content: center;
+    padding: 50px 10px;
+    a {
+      padding: 20px;
+      color: #111;
+      text-decoration: none;
+      font-size: 2rem;
+    }
+  }
+
+  .center {
+    text-align: center;
+  }
+
+  h3 {
+    margin: 0;
+  }
+
+  p {
+    margin: 10px 0 0 0;
+  }
+</style>

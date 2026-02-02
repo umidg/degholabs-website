@@ -1,0 +1,86 @@
+---
+import Showcase from "../assets/hiw.svg";
+const features = [
+  "Select your training program",
+  "Get hands-on practical experience",
+  "Earn industry certifications",
+];
+---
+
+<section class="product-defined">
+  <div class="container">
+    <div class="row product-brief-items">
+      <div class="brief-media center one-half column">
+        <img src={Showcase.src} alt="Training Process" />
+      </div>
+      <div class="brief-tab one-half column">
+        <h3 class="h1-title">Transform Your IT Career Today</h3>
+        <p class="m-paragraph m-margin">
+          Join thousands of professionals who have advanced their careers with
+          our comprehensive IT training programs. From certifications to
+          hands-on projects.
+        </p>
+        <ol class="ro">
+          {
+            features.map((el, index) => (
+              <li>
+                <span>{index + 1}</span> <span>{el}</span>
+              </li>
+            ))
+          }
+        </ol>
+        <br />
+        <a href="/programs" class="button button-primary lg"
+          >View All Programs</a
+        >
+      </div>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  .product-defined {
+    padding: 120px 20px;
+    .brief-media img {
+      width: 100%;
+    }
+    .product-brief-items {
+      display: flex;
+      align-items: center;
+    }
+    .brief-tab {
+      padding-top: 40px;
+    }
+
+    ol {
+      counter-reset: step;
+      align-items: center;
+      list-style: none;
+      > li {
+        position: relative;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        span:first-child {
+          border: 2px solid #121117;
+          height: 20px;
+          width: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50px;
+        }
+      }
+    }
+
+    @media (max-width: 700px) {
+      .product-brief-items {
+        flex-direction: column-reverse;
+        gap: 30px;
+        .brief-tab {
+          padding-top: 0px;
+        }
+      }
+    }
+  }
+</style>

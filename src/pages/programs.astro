@@ -1,0 +1,165 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="Degho Labs | Our Programs">
+  <Header />
+
+  <section class="services-hero">
+    <div class="container">
+      <h1 class="h1-title">Our Training Programs</h1>
+      <p>
+        Comprehensive IT training and certification programs designed to
+        accelerate your career
+      </p>
+    </div>
+  </section>
+
+  <section class="services-detail">
+    <div class="container">
+      <div class="service-card">
+        <h2 class="h2-title">Microsoft 365</h2>
+        <ul>
+          <li>MD 102 - Microsoft 365 Endpoint Administrator</li>
+          <li>
+            MS 900 - Microsoft 365 Fundamentals (Discontinued by Microsoft)
+          </li>
+          <li>MS 900 - Microsoft 365 Fundamentals (Trainer: Nishchal)</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <h2 class="h2-title">Cloud Computing</h2>
+        <ul>
+          <li>AZ 900 - Microsoft Azure Fundamentals Certificate</li>
+          <li>AWS Solution Architect Associate Certificate</li>
+          <li>AWS CloudFormation Training</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <h2 class="h2-title">Networking</h2>
+        <ul>
+          <li>CompTIA Network+ Certification Training</li>
+          <li>Network design and implementation</li>
+          <li>Troubleshooting and security fundamentals</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <h2 class="h2-title">Web Development</h2>
+        <ul>
+          <li>JavaScript (ES6+ and modern frameworks)</li>
+          <li>HTML5 & CSS3</li>
+          <li>MERN Stack (MongoDB, Express, React, Node.js)</li>
+          <li>PostgreSQL Database Development</li>
+          <li>Full-stack web application development</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <h2 class="h2-title">Artificial Intelligence</h2>
+        <ul>
+          <li>Large Language Models (LLMs)</li>
+          <li>AI Models and Agents</li>
+          <li>Host LLMs (deployment and management)</li>
+          <li>n8n Workflows (automation and integration)</li>
+          <li>AI-powered solutions development</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <h2 class="h2-title">UI/UX Design</h2>
+        <ul>
+          <li>User Interface Design Principles</li>
+          <li>User Experience Research</li>
+          <li>Design System Development</li>
+          <li>Wireframing and Prototyping</li>
+          <li>Modern design tools (Figma, Sketch)</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <h2 class="h2-title">WordPress Development</h2>
+        <ul>
+          <li>WordPress Theme Development</li>
+          <li>Plugin Development</li>
+          <li>Custom WordPress Solutions</li>
+          <li>WordPress Security and Optimization</li>
+          <li>E-commerce with WooCommerce</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<style is:global>
+  .services-hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: var(--tenary);
+  }
+
+  .services-hero h1 {
+    color: #fff;
+    margin-bottom: 20px;
+  }
+
+  .services-hero p {
+    color: #e2e8f0;
+  }
+
+  .services-detail {
+    padding: 60px 20px;
+  }
+
+  .services-detail .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+  }
+
+  .service-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e2e8f0;
+  }
+
+  .service-card h2 {
+    color: #1e40af;
+    margin-bottom: 20px;
+  }
+
+  .service-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .service-card li {
+    padding: 10px 0;
+    padding-left: 25px;
+    position: relative;
+    color: #334155;
+  }
+
+  .service-card li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #2563eb;
+    font-weight: bold;
+  }
+
+  @media (max-width: 700px) {
+    .services-detail .container {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

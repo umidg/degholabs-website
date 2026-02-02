@@ -1,0 +1,19 @@
+{
+  "name": "astrobrew",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/netlify": "^6.6.4",
+    "astro": "^5.16.16"
+  },
+  "devDependencies": {
+    "sass": "^1.63.6"
+  }
+}
