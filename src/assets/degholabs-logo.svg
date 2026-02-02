@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <linearGradient id="brandGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4338ca" /> <!-- Indigo -->
+      <stop offset="100%" stop-color="#9333ea" /> <!-- Purple -->
+    </linearGradient>
+  </defs>
+  
+  <!-- Just the Icon Symbol -->
+  <g transform="translate(0, 0) scale(1.0)">
+    <path d="M40 0 L75 20 L75 60 L40 80 L5 60 L5 20 Z" fill="url(#brandGradient)" />
+    <path d="M25 20 H50 C64 20 70 30 70 40 C70 50 64 60 50 60 H25 V20 Z M25 30 V50" fill="white" />
+    <circle cx="58" cy="40" r="4" fill="white" />
+  </g>
+</svg>
