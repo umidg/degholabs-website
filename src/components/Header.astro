@@ -1,11 +1,13 @@
 ---
-
+import Logo from "../assets/degholabls-logo.png";
 ---
 
 <header>
   <nav class="container">
     <div class="nav-logo">
-      <a href="/" class="logo-text">Degho Labs</a>
+      <a href="/">
+        <img src={Logo.src} alt="Degho Labs" class="logo-image" />
+      </a>
     </div>
     <div class="nav-links">
       <a href="/programs">Programs</a>
@@ -31,12 +33,10 @@
     .nav-links {
       margin-top: -2px;
     }
-    .logo-text {
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: #333;
-      text-decoration: none;
-      letter-spacing: 2px;
+    .logo-image {
+      max-width: 150px;
+      height: auto;
+      display: block;
     }
     a:not(.button) {
       padding: 0 10px;
