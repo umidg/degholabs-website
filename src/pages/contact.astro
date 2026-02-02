@@ -89,22 +89,21 @@ import Footer from "../components/Footer.astro";
     </div>
   </section>
 
-  <script>
+  <script is:inline>
     const form = document.getElementById("contact-form");
-    if (!form) return;
+    const submitButton = form?.querySelector('button[type="submit"]');
 
-    const submitButton = form.querySelector('button[type="submit"]');
-    if (!submitButton) return;
-
-    form.addEventListener("submit", async (e) => {
+    form?.addEventListener("submit", async (e) => {
       e.preventDefault();
 
+      if (!submitButton) return;
+
       // Disable button and show loading state
-      (submitButton as HTMLButtonElement).disabled = true;
+      submitButton.disabled = true;
       submitButton.textContent = "Sending...";
 
       try {
-        const formData = new FormData(form as HTMLFormElement);
+        const formData = new FormData(form);
         const data = Object.fromEntries(formData);
 
         // Replace with your deployed worker URL
@@ -121,7 +120,7 @@ import Footer from "../components/Footer.astro";
 
         if (response.ok && result.success) {
           alert("Message sent successfully! We'll get back to you soon.");
-          (form as HTMLFormElement).reset();
+          form.reset();
         } else {
           alert("Error: " + (result.error || "Failed to send message"));
         }
@@ -130,7 +129,7 @@ import Footer from "../components/Footer.astro";
         alert("Error: Failed to send message. Please try again.");
       } finally {
         // Re-enable button
-        (submitButton as HTMLButtonElement).disabled = false;
+        submitButton.disabled = false;
         submitButton.textContent = "Send Message";
       }
     });
